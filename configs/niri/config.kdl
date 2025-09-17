@@ -119,6 +119,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "~/Pictures/wallpapers/setwall.sh"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "avizo-service"
 prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
@@ -145,10 +146,10 @@ binds {
     Mod+T { spawn "thunar"; }
     Super+Alt+L { spawn "swaylock"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "volumectl" "-b" "-u" "up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "volumectl" "-b" "-u" "down"; }
+    XF86AudioMute        allow-when-locked=true { spawn "volumectl" "toggle-mute"; } 
+    XF86AudioMicMute     allow-when-locked=true { spawn "volumectl" "-m" "toggle-mute"; }
 
     Mod+Q { close-window; }
 
@@ -175,8 +176,8 @@ binds {
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
-    Mod+Shift+WheelScrollDown      { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
-    Mod+Shift+WheelScrollUp        { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+    Mod+Shift+WheelScrollDown      { spawn "volumectl" "-b" "-u" "down"; }
+    Mod+Shift+WheelScrollUp        { spawn "volumectl" "-b" "-u" "up"; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
