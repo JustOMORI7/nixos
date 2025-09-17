@@ -1,0 +1,22 @@
+# Alacritty yapılandırma dosyası (.toml formatı)
+
+[window]
+# Pencere kenar boşlukları (px cinsinden)
+padding = { x = 10, y = 10 }
+
+[font]
+# Ana font: CaskaydiaMono Nerd Font
+normal = { family = "CaskaydiaMono Nerd Font" }
+bold = { family = "CaskaydiaMono Nerd Font" }
+italic = { family = "CaskaydiaMono Nerd Font" }
+bold_italic = { family = "CaskaydiaMono Nerd Font" }
+
+# Font boyutu (px)
+size = 13.0
+
+[colors.primary]
+background = "#1e1e1e"
+foreground = "#dcdcdc"
+
+[terminal.shell]
+program = "zsh"
