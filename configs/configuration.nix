@@ -14,7 +14,9 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-hp"; # Define your hostname.
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  networking.hostName = "monster-nix"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
@@ -50,7 +52,7 @@
   # Enable xdg portal
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gnome xdg-desktop-portal-gtk ];
+    extraPortals = with pkgs; [ xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk ];
   };
 
   # Enable niri window manager
@@ -67,6 +69,19 @@
     nerd-fonts.caskaydia-mono
     nerd-fonts.droid-sans-mono
   ];
+
+  # Enable "Kde Connect"
+  programs.kdeconnect.enable = true;
+
+  # Enable and configure zsh
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    ohMyZsh = {
+      enable = true;
+      theme = "bureau";
+    };
+  };
 
   # List services that you want to enable:
   services.flatpak.enable = true;
