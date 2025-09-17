@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "width": 1100,
+    "width": 1500,
     "margin-top": 10,
     "height": 35,
     "spacing": 5,
@@ -54,7 +54,7 @@
         "tooltip": "  {:%d/%m/%Y}"
     },
     "custom/music": {  
-        "exec": "playerctl -p audacious metadata --format '  {{artist}} - {{title}}'",  
+        "exec": "playerctl -p audacious metadata --format '  {{artist}} - {{title}}'",  
         "interval": 1,  
         "on-click": "playerctl -p audacious play-pause",  
         "on-scroll-up": "playerctl -p audacious next",  
