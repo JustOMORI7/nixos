@@ -11,6 +11,7 @@
     rclone obconf nsxiv weather keepassxc deluge-gtk emacs
     dunst lxappearance claws-mail mpv alsa-utils strawberry
     materia-kde-theme localsend flameshot qt6Packages.qt6ct
-    unzip unrar peazip wineWowPackages.full  nicotine-plus
+    unzip unrar peazip wineWowPackages.full nicotine-plus
+    openrgb
   ];
 }

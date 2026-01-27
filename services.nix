@@ -46,4 +46,5 @@
   services.logmein-hamachi.enable = true;
   programs.kdeconnect.enable = true;
   services.espanso.enable = true;
+  services.hardware.openrgb.enable = true;
 }

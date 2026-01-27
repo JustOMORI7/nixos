@@ -5,13 +5,12 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./services.nix
-    ];
-
+  imports = [
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./services.nix
+  ];
+  
   # Use the GRUB EFI boot loader.
   boot.loader.grub = {
     enable = true;
@@ -25,6 +24,10 @@
   
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Use MONSTER drivers
+  boot.extraModulePackages = [ config.boot.kernelPackages.tuxedo-keyboard ];
+  boot.kernelModules = [ "tuxedo_keyboard" ];
 
   networking.hostName = "monster-nix"; # Define your hostname.
 
@@ -124,4 +127,3 @@
 
   system.stateVersion = "25.11"; # Do NOT change this!
 }
-
