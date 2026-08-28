@@ -32,7 +32,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "hid-nintendo" "uinput" ];
 
-  networking.hostName = "monster-nix";
+  networking.hostName = "chomu-owo";
   networking.networkmanager.enable = true;
 
   # --- Enable bluetooth --- #
