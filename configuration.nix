@@ -130,6 +130,7 @@
     shellAliases = {
       ls = "eza --icons always";
       shx = "EDITOR=hx sudoedit";
+      cat = "bat";
       ytdl-opus = ''nix run github:NixOS/nixpkgs/nixos-unstable#yt-dlp -- -f "ba[acodec=opus]/ba" --extract-audio --audio-format opus --audio-quality 96k --embed-thumbnail --embed-metadata --ppa "ThumbnailsConvertor+ffmpeg:-vf crop=\'min(iw\,ih):min(iw\,ih)\'" -o "%(uploader)s - %(title)s.%(ext)s"'';
     };
   };

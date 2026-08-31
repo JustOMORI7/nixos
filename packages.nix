@@ -10,6 +10,6 @@
     appimage-run localsend heroic protonup-qt qbittorrent libnotify
     swaynotificationcenter wf-recorder ferdium cliphist wlopm fd fzf
     wl-clipboard hyprpicker imagemagick unzip unrar swaybg upscayl
-    flowblade lolcat cowsay mpc ymuse yazi
+    flowblade lolcat cowsay mpc ymuse yazi tesseract bat
   ];
 }
