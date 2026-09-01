@@ -48,7 +48,6 @@
     localsend.enable = true;
     kdeconnect.enable = true;
     steam.enable = true;
-    xfconf.enable = true;
   };
 
   systemd.services.mpd.environment = {

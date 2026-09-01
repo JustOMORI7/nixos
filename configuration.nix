@@ -52,7 +52,6 @@
   console = {
     font = "Lat2-Terminus16";
     keyMap = "tr";
-    # useXkbConfig = true; # use xkb.options in tty.
   };
 
   # --- Enable sound --- #
@@ -83,8 +82,8 @@
     nerd-fonts.caskaydia-mono
   ];
 
-  # --- Enable Mango and SDDM --- #
-  programs.mango.enable = true;
+  # --- Enable niri and SDDM --- #
+  programs.niri.enable = true;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
