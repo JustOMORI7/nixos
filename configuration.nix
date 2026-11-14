@@ -8,6 +8,7 @@
     ./nvidia.nix
     ./services.nix
     ./packages.nix
+    ./spotify.nix
   ];
 
   # --- Use the GRUB boot loader --- #
@@ -81,6 +82,9 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
   ];
+
+  # --- Enable Polkit --- #
+  security.polkit.enable = true;
 
   # --- Enable niri and SDDM --- #
   programs.niri.enable = true;

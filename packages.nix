@@ -10,6 +10,6 @@
     appimage-run heroic protonup-qt libnotify swaynotificationcenter 
     wf-recorder ferdium cliphist awww fzf wl-clipboard hyprpicker 
     imagemagick unzip unrar swaybg upscayl fd bat flowblade lolcat 
-    cowsay mpc ymuse yazi tesseract qbittorrent
+    cowsay yazi tesseract qbittorrent mate-polkit gh
   ];
 }
